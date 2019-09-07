@@ -13,7 +13,7 @@ const [homeScore, setHomeScore] = useState(0); // set to { useState }, line 2
 const [awayScore, setAwayScore] = useState(0); // 
 
 //TEAM NAMES - variables which can be changed/updated 
-const homeTeam = "Pepper";
+const homeTeam = "Slugs";
 const awayTeam = "Salt";
 
 // Give these better names, and decide whether you want to pass an initial score into the state hook as the initialValue
@@ -30,26 +30,37 @@ const awayTeam = "Salt";
 
             <div className="home__score">{homeScore}</div> 
           </div>
-          <div className="timer">00:03</div>
+          
+          <div className="timer">01:02</div>
+
           <div className="away">
             <h2 className="away__name">{awayTeam}</h2>
             <div className="away__score">{awayScore}</div>
           </div>
+        
         </div>
         <BottomRow />
       </section>
+      
       <section className="buttons">
+
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our State setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick = { () => setHomeScore (homeScore + 6) }>Home Touchdown</button>
-          <button className="homeButtons__touchdown" onClick = { () => setHomeScore (homeScore + 1) }>Home XPT</button>
-          <button className="homeButtons__fieldGoal" onClick = { () => setHomeScore (homeScore + 3) }>Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick = { () => setHomeScore (homeScore + 6) }>Home : Touchdown!</button>
+          <button className="homeButtons__touchdown" onClick = { () => setHomeScore (homeScore + 1) }>Home : XPT</button>
+          <button className="homeButtons__fieldGoal" onClick = { () => setHomeScore (homeScore + 3) }>Home : Field Goal</button>
+
+          <button className="homeButtons__fieldGoal" onClick = { () => setHomeScore (0) }>reset : HOME</button>
         </div>
+
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick = { () => setAwayScore (awayScore + 6) }>Away Touchdown</button>
-          <button className="awayButtons__touchdown" onClick = { () => setAwayScore (awayScore + 1) }>Away XPT</button>
-          <button className="awayButtons__fieldGoal" onClick = { () => setAwayScore (awayScore + 3) }>Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick = { () => setAwayScore (awayScore + 6) }>Away : Touchdown</button>
+          <button className="awayButtons__touchdown" onClick = { () => setAwayScore (awayScore + 1) }>Away : XPT</button>
+          <button className="awayButtons__fieldGoal" onClick = { () => setAwayScore (awayScore + 3) }>Away : Field Goal</button>
+
+          <button className="awayButtons__fieldGoal" onClick = { () => setAwayScore (0) }>reset : AWAY</button>
         </div>
+      
       </section>
     </div>
   );
