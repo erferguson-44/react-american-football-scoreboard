@@ -13,7 +13,7 @@ const [homeScore, setHomeScore] = useState(0); // set to { useState }, line 2
 const [awayScore, setAwayScore] = useState(0); // 
 
 //TEAM NAMES - variables which can be changed/updated 
-const homeTeam = "Slugs";
+const homeTeam = "Pepper";
 const awayTeam = "Salt";
 
 // Give these better names, and decide whether you want to pass an initial score into the state hook as the initialValue
